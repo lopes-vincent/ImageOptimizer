@@ -4,9 +4,5 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
 
-    <services>
-        <service id="imageoptimizer.optimize_service" class="ImageOptimizer\EventListeners\ImageListener">
-            <tag name="kernel.event_subscriber"/>
-        </service>
-    </services>
+
 </config>

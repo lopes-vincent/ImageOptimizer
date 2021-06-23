@@ -1,8 +1,14 @@
 # Image Optimizer
 
+## Installation
+
+```
+composer require cqfdev/image-optimizer-module ~2.0.0
+```
+
 Ce module permet d'optimiser les images traitées par Thelia en réduisant leur taille.
 
-Il utilise la librairie ps/image-optimizer, qui s'appuie elle-meêm sur des librairies
+Il utilise la librairie ps/image-optimizer, qui s'appuie elle-même sur des librairies
 natives :
 
 > This library is handy and very easy to use optimizer for image files. It uses optipng, pngquant, jpegoptim, svgo and few more libraries, so before use it you should install proper libraries on your server.
