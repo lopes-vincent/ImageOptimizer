@@ -1,0 +1,53 @@
+{extends file="admin-layout.tpl"}
+
+{block name="no-return-functions"}
+    {$admin_current_location = 'tools'}
+{/block}
+
+{block name="check-resource"}admin.image_optimizer{/block}
+{block name="check-access"}view{/block}
+
+{block name="page-title"}{intl  l='ImageOptimizer configuration' d="imageoptimizer.bo.default"}{/block}
+
+{block name="main-content"}
+<div>
+    <div id="wrapper" class="container">
+        <div class="row">
+            <div class="col-md-12 general-block-decorator">
+                <div class="row">
+                    <div class="col-md-12">
+                    {form name="imageoptimizer_form_configuration_form"}
+                        <form method="POST" action="{url path="/admin/module/ImageOptimizer/save"}" {form_enctype} class="clearfix">
+                            {form_field field='success_url'}
+                                <input type="hidden" name="{$name}" value="{navigate to="current"}" />
+                            {/form_field}
+                            {form_field field='error_url'}
+                                <input type="hidden" name="{$name}" value="{{navigate to="current"}}" />
+                            {/form_field}
+                            {form_hidden_fields}
+                            <div class="row">
+                                {form_field field="jpeg_optimize_quality"}
+                                    <div class="form-group {if $error}has-error{/if}">
+                                        <label for="{$name}" class="control-label">{intl l="Jpeg images quality (0-100)" d="imageoptimizer.bo.default"} : </label>
+                                        <input type="text" id="{$name}" name="{$name}" class="form-control" value="{$value}">
+                                    </div>
+                                {/form_field}
+                                {form_field field="png_optimize_quality"}
+                                    <div class="form-group {if $error}has-error{/if}">
+                                        <label for="{$name}" class="control-label">{intl l="Pngs images min and max quality \"min-max\" (0-100)-(0-100) " d="imageoptimizer.bo.default"} : </label>
+                                        <input type="text" id="{$name}" name="{$name}" class="form-control" value="{$value}">
+                                    </div>
+                                {/form_field}
+                            </div>
+                            <input type="submit" class="form-submit-button btn btn-sm btn-success" value="Valider">
+                        </form>
+                    {/form}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{/block}
+
