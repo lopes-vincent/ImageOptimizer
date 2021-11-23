@@ -5,12 +5,7 @@
   "require": {
     "thelia/installer": "~1.1",
     "ps/image-optimizer": "^1.2"
-  },
-  "replace": {
-    "psr/log": "*",
-    "symfony/options-resolver": "*",
-    "thelia/installer": "*"
-  },
+  }
   "extra": {
     "installer-name": "ImageOptimizer"
   }
