@@ -12,8 +12,6 @@
 
 namespace ImageOptimizer\EventListeners;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 use ImageOptimizer\OptimizerFactory;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
